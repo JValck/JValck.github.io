@@ -2,8 +2,8 @@ loadNavbar(getCurrentPageName());
 
 function loadNavbar(pageName) {
   $.get('/partials/navbar.html', function (content) {
-    $(content).find('#'+pageName).attr('class','active');
     $('.navigation').html(content);
+    $('#'+pageName).addClass('active');
   }, 'html');
 }
 
