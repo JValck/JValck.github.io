@@ -20,7 +20,7 @@ public class Launcher {
 		}
 	}
 
-	private static void showErrorMessageDialog(Exception e) {
+	public static void showErrorMessageDialog(Exception e) {
 		Object[] buttons = {"Sluiten", "Meer details"};		
 		int n = JOptionPane.showOptionDialog(null,
 				e.getMessage(),

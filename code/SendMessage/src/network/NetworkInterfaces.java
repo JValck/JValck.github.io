@@ -1,8 +1,10 @@
 package network;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -37,6 +39,14 @@ public class NetworkInterfaces {
 
 	public List<NetworkInterface> getInterfacesWithAddress() {
 		return interfacesWithAddress;
-	}	
+	}
+
+	public NetworkInterface getInterfaceWithAddressByName(String name) throws SocketException {
+		return NetworkInterface.getByName(name);
+	}
+	
+	public boolean isReachable(String address) throws UnknownHostException, IOException {
+		return InetAddress.getByName(address).isReachable(7000);//wait 7 seconds
+	}
 	
 }
