@@ -36,8 +36,8 @@ public class SendMessageClickListener implements ActionListener {
 		boolean validIpAddress = true;
 		if(RuntimeVariables.getVariable(Variable.RECEIVING_IP_ADDRESS) == null){
 			validIpAddress = false;
-			String address = JOptionPane.showInputDialog(null, "Er is nog geen geldig bestemmingsadres opgegeven."
-					+ "\n Vul hieronder het IP-adres in van de bestemmeling.", "IP adres", JOptionPane.QUESTION_MESSAGE);
+			String address = JOptionPane.showInputDialog(null, "Er is nog geen geldig bestemmingsadres opgegeven voor deze poort.\n"
+					+ "\nVul hieronder het IP-adres in van de bestemmeling.", "IP adres", JOptionPane.QUESTION_MESSAGE);
 			try {
 				if(address!=null && ((NetworkController) RuntimeVariables.getVariable(Variable.NETWORK_CONTROLLER)).isReachable(address)){
 					RuntimeVariables.saveVariable(Variable.RECEIVING_IP_ADDRESS, address);

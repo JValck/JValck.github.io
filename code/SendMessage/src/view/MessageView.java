@@ -52,7 +52,7 @@ public class MessageView implements Viewable {
 		panel.setBorder(BorderFactory.createTitledBorder("Stuur & Ontvang Berichten"));
 		
 		panel.add(new SendMessagePartial());
-		panel.add(new ReceiveMessagePartial());
+		panel.add(new ReceiveMessagePartial(networkController.getServer()));
 		return panel;
 	}
 

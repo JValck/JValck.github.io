@@ -70,4 +70,7 @@ public class NetworkController {
 		return Collections.list(iface.getInetAddresses()).get(0).getHostAddress();
 	}
 	
+	public Server getServer(){
+		return server;
+	}
 }

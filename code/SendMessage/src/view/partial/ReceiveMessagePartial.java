@@ -11,6 +11,7 @@ import javax.swing.JTextArea;
 import application.RuntimeVariables;
 import application.RuntimeVariables.Variable;
 import domain.Observer;
+import network.Server;
 
 public class ReceiveMessagePartial extends JPanel implements Observer{
 
@@ -18,9 +19,10 @@ public class ReceiveMessagePartial extends JPanel implements Observer{
 	private JTextArea textArea;
 	private StringBuilder messageBuilder;
 	
-	public ReceiveMessagePartial(){
+	public ReceiveMessagePartial(Server server){
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		initView();
+		server.registerObserver(this);
 	}
 
 	private void initView() {
@@ -39,6 +41,7 @@ public class ReceiveMessagePartial extends JPanel implements Observer{
 	@Override
 	public void update() {
 		messageBuilder.append(RuntimeVariables.getVariable(Variable.RECEIVED_MESSAGE));
+		textArea.setText(messageBuilder.toString());
 	}
 
 }
