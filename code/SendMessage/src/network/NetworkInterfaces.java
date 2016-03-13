@@ -45,8 +45,10 @@ public class NetworkInterfaces {
 		return NetworkInterface.getByName(name);
 	}
 	
-	public boolean isReachable(String address) throws UnknownHostException, IOException {
-		return InetAddress.getByName(address).isReachable(7000);//wait 7 seconds
+	public boolean isReachable(String address) throws UnknownHostException, IOException, InterruptedException {
+		Process p1 = java.lang.Runtime.getRuntime().exec("ping "+address);
+		int returnVal = p1.waitFor();
+		return (returnVal==0);//will return 0 if ping success
 	}
 	
 }

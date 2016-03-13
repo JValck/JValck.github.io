@@ -38,12 +38,13 @@ public class SendMessageClickListener implements ActionListener {
 			validIpAddress = false;
 			String address = JOptionPane.showInputDialog(null, "Er is nog geen geldig bestemmingsadres opgegeven voor deze poort.\n"
 					+ "\nVul hieronder het IP-adres in van de bestemmeling.", "IP adres", JOptionPane.QUESTION_MESSAGE);
+			if(address == null) return false;
 			try {
 				if(address!=null && ((NetworkController) RuntimeVariables.getVariable(Variable.NETWORK_CONTROLLER)).isReachable(address)){
 					RuntimeVariables.saveVariable(Variable.RECEIVING_IP_ADDRESS, address);
 					validIpAddress = true;
 				}
-			} catch (IOException e) {
+			} catch (IOException | InterruptedException e) {
 				Launcher.showErrorMessageDialog(e);
 				e.printStackTrace();
 			}			

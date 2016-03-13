@@ -49,7 +49,7 @@ public class NetworkController {
 		return networkInterfaces.getInterfaceWithAddressByName(name);
 	}
 
-	public boolean isReachable(String address) throws UnknownHostException, IOException {
+	public boolean isReachable(String address) throws UnknownHostException, IOException, InterruptedException {
 		return networkInterfaces.isReachable(address);		
 	}
 
