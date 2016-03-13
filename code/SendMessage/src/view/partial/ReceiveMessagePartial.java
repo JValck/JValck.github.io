@@ -40,7 +40,8 @@ public class ReceiveMessagePartial extends JPanel implements Observer{
 
 	@Override
 	public void update() {
-		messageBuilder.append(RuntimeVariables.getVariable(Variable.RECEIVED_MESSAGE));
+		messageBuilder.append(RuntimeVariables.getVariable(Variable.RECEIVING_IP_ADDRESS)).append("> ");
+		messageBuilder.append(RuntimeVariables.getVariable(Variable.RECEIVED_MESSAGE)).append("\n");
 		textArea.setText(messageBuilder.toString());
 	}
 

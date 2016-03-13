@@ -1,10 +1,12 @@
 package controller;
 
 import java.io.IOException;
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -67,10 +69,23 @@ public class NetworkController {
 
 	public String getInterfaceIpAddressByName(String name) throws SocketException {
 		NetworkInterface iface = getInterfaceByName(name);		
-		return Collections.list(iface.getInetAddresses()).get(0).getHostAddress();
+		return preferIPv4(Collections.list(iface.getInetAddresses()));
 	}
 	
+	private String preferIPv4(ArrayList<InetAddress> list) {//prefer IPv4 over IPv6
+		for(InetAddress address: list){
+			if(address instanceof Inet4Address){
+				return address.getHostAddress();
+			}
+		}		
+		return list.get(0).getHostAddress();
+	}
+
 	public Server getServer(){
 		return server;
+	}
+
+	public void stopServer() throws IOException {
+		server.closeSocket();		
 	}
 }

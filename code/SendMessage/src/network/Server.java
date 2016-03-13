@@ -39,14 +39,15 @@ public class Server implements Subject{
 			public void run() {			
 				try {
 					socket = sSocket.accept();
+					RuntimeVariables.saveVariable(Variable.RECEIVING_IP_ADDRESS, socket.getRemoteSocketAddress().toString());
 					dataIn = new DataInputStream(socket.getInputStream());
 				} catch (IOException e1) {
 					Launcher.showErrorMessageDialog(e1);
 					e1.printStackTrace();
 				}		
 				
-				while(true){
-					try {
+				while(socket!= null && !socket.isClosed()){
+					try {						
 						RuntimeVariables.saveVariable(Variable.RECEIVED_MESSAGE, dataIn.readUTF());
 					} catch (IOException e) {
 						Launcher.showErrorMessageDialog(e);
@@ -80,5 +81,10 @@ public class Server implements Subject{
 		return socket != null;
 	}
 
-
+	public void closeSocket() throws IOException {
+		socket.close();
+		sSocket.close();
+		socket = null;
+		sSocket = null;
+	}
 }

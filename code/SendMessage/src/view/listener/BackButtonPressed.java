@@ -2,7 +2,7 @@ package view.listener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.SocketException;
+import java.io.IOException;
 
 import application.Launcher;
 import application.RuntimeVariables;
@@ -13,10 +13,10 @@ public class BackButtonPressed implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		try {
+		try {			
 			((MainController) RuntimeVariables.getVariable(Variable.MAIN_CONTROLLER)).interfaceOverview();
 			RuntimeVariables.saveVariable(Variable.RECEIVING_IP_ADDRESS, null);//reset receiving port
-		} catch (SocketException e) {
+		} catch (IOException e) {
 			Launcher.showErrorMessageDialog(e);
 			e.printStackTrace();
 		}
