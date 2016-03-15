@@ -1,62 +1,264 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <title>EduBox - Informatica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta itemprop="pagename" content="IN_root">
+<meta charset="utf-8">
+<title>EduBox - Informatica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta itemprop="pagename" content="IN_root">
 
-  <!-- Loading Bootstrap -->
-  <link href="../../../css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Loading Bootstrap -->
+<link href="../../../css/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 
-  <!-- Loading Flat UI -->
-  <link href="../../../css/flat-ui.min.css" rel="stylesheet">
-  
-  <link href="../../../css/custom.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+<link href="../../../css/flat-ui.min.css" rel="stylesheet">
 
-  <link rel="shortcut icon" href="img/favicon.ico">
+<link href="../../../css/custom.css" rel="stylesheet">
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-  <!--[if lt IE 9]>
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- Google Analytics -->
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-75121471-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
   <script src="/js/vendor/html5shiv.js"></script>
   <script src="/js/vendor/respond.min.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="navigation"><!-- loaded by javascript --></div>
-  <div class="container">
-    <h3>Computernetwerken</h3>
-    <p>Deze materialen zijn gemaakt voor <strong>4 TSO Handel</strong></p>
-	<div class="row">
-		<div class="col-md-3 hidden-xs">
-			<div class="tile">
-				<img src="../../../img/icons/svg/pdf.svg" alt="pdf" class="tile-image"/>
-				<a href="Software.pdf" class="btn btn-primary btn-large btn-block">Downloaden</a>
-			</div>
-			<div class="tile">
-				<img src="../../../img/icons/svg/clipboard.svg" alt="Oefeningen" class="tile-image"/>
-				<a href="serverquiz.html" class="btn btn-primary btn-large btn-block">Oefeningen Servers</a>
-			</div>
-		</div>
-		<div class="col-xs-12 col-md-9">
-			<section class="uitleg" style="background-color: #EFF0F2; color: black;">
-			<p>
-				De online oefeningen zijn te vinden door op de knop "Oefeningen Servers" te klikken. Veel succes!
-			</p>
-			</section>			
-		</div>
+	<div class="navigation">
+		<!-- loaded by javascript -->
 	</div>
+	<div class="container">
+		<h3>Computernetwerken - Software</h3>
+		<p>
+			Deze materialen zijn gemaakt voor <strong>4 TSO Handel</strong>
+		</p>
+		<div class="row">
+			<div class="col-md-3 hidden-xs">
+				<div class="tile">
+					<img src="../../../img/icons/svg/pdf.svg" alt="pdf"
+						class="tile-image" /> <a href="Software.pdf"
+						class="btn btn-primary btn-large btn-block">Downloaden</a>
+				</div>
+				<div class="tile">
+					<img src="../../../img/icons/svg/clipboard.svg" alt="Oefeningen"
+						class="tile-image" /> <a href="serverquiz.html"
+						class="btn btn-primary btn-large btn-block">Oefeningen Servers</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-9">
+				<section class="uitleg"
+					style="background-color: #EFF0F2; color: black;">
+					<p>De online oefeningen zijn te vinden door op de knop
+						"Oefeningen Servers" te klikken. Veel succes!</p>
+				</section>
+				<section class="uitleg" style="background-color: #34495e">
+					<!-- intro -->
+					<p>
+						In de vorige les bespraken we de <a href="../Hardware/index.html">hardware</a>
+						die nodig is om twee computers met elkaar te laten communiceren.
+						Naast hardware (routers, switches, …) is er uiteraard ook nood aan
+						software (verschillende programma’s). Zonder software krijgt de
+						computer wel signalen binnen maar heeft die geen idee wat hij
+						ermee moet aanvangen.
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #9b59b6">
+					<h5>DNS</h5>
+					<p>Wanneer je in de adresbalk 217.148.93.140 intypt kom je op
+						de site van SmartSchool terecht. Merk op dat de adresbalk ook is
+						aangepast naar https://www.smartschool.be. Wat kan jij het
+						gemakkelijkst onthouden, de nummercombinatie of het webadres?
+						Inderdaad, het webadres is veel gemakkelijker om te onthouden. Je
+						computer maakt voor jou de vertaalslag naar het IP-adres (zie
+						verder), het gebruikt hiervoor de DNS-server.</p>
+					<h6>DNS-Server</h6>
+					De DNS-server is een grote databank die webadressen (bv:
+					www.google.com) vertaalt naar een IP-adres. Dit is hieronder
+					symbolisch weergegeven. De rechtse man (met snor) is de DNS-server<img
+						alt="DNS-Server" src="../../../img/dns_server.png">
+				</section>
+				<section class="uitleg" style="background-color: #3498db">
+					<h5>IP-adressen</h5>
+					<p>Wanneer computers met elkaar willen communiceren hebben ze
+						een adres nodig. Men noemt dit het IP-adres. Elke computer heeft
+						een uniek adres. Je kan het vergelijken met de post. Elk huis /
+						appartement heeft een eigen uniek adres. Op die manier weet de
+						postbode waar hij de brief moet afleveren. Typ in het startmenu
+						‘cmd’. Selecteer de eerste mogelijkheid die verschijnt. Een zwart
+						scherm met witte letters zal openen. Hierin typ je het commando
+						‘ipconfig’. Je krijgt nu een hele hoop informatie te zien. Per
+						adapter staat er extra informatie.</p>
+					<h6>Opdrachten</h6>
+					<ol>
+						<li>Zoek naar de Ethernet adapter. Zoek naar IPv4-Adres.
+							Noteer de cijfercombinatie hieronder. Je kan deze vinden achter
+							het dubbelpunt.</li>
+						<li>Kan je ook een IPv6-Adres vinden? Indien ja, noteer de
+							cijfer en letter combinatie hieronder. Je kan deze opnieuw vinden
+							achter het dubbele punt.</li>
+						<li>Vergelijk de info met die van je buur. Wat valt je op?</li>
+					</ol>
+					<h6>Versies</h6>
+					Er bestaan twee versies van het IP-adres: IPv4 en IPv6. IPv4 is
+					veel korter en bestaat uit vier keer een getal tussen 0 en 255 en
+					wordt onderscheiden door een punt. Een IPv6 daarentegen bestaat uit
+					cijfers (0 tot 9) en letters (a-f). Elke combinatie wordt
+					onderscheiden door een dubbelepunt. In de tabel hieronder zie je
+					twee de verschillende versies.
+					<table class="table">
+						<tr>
+							<td>IPv4</td>
+							<td>192.168.0.5</td>
+						</tr>
+						<tr>
+							<td>IPv6</td>
+							<td>2001:0db8:85a3:08d3:1319:8a2e:0370:7344</td>
+					</table>
 
-  </div>
-  <!-- /.container -->
+					<h6>DHCP</h6>
+					<p>De kans is klein dat je zelf het IP-adres hebt opgegeven.
+						Het IP-adres is vooraf gespecifieerd. De DHCP-server heeft deze
+						taak op zich genomen. Wanneer er een computer in het netwerk
+						actief wordt, deelt hij het adres uit. Je kan het vergelijken met
+						op hotel gaan. De toerist (=computer) komt in het hotel en wil een
+						kamer (= het netwerk). Hij gaat hiervoor naar de balie van het
+						hotel, waar hij een sleutel (= IP-adres) krijgt van de
+						receptionist (= DHCP-server). De kans is groot dat de volgende
+						keer een andere sleutel wordt toegewezen. Dit is ook het geval bij
+						een DHCP-server.</p>
+					<img alt="DHCP" src="../../../img/dhcp.jpg">
+
+					<h6>Zelf een IP-adres ingeven</h6>
+					<p>Wat moet je doen als er zich geen DHCP-server in het netwerk
+						bevindt? Zonder IP-adres kan je niet op het netwerk, aangezien er
+						geen IP-adres wordt uitgedeeld door de DHCP-server moet je het
+						zelf doen. Hoe ga je te werk?
+					<ol>
+						<li>Klik op het icoontje van het netwerk onderaan de
+							taakbalk.</li>
+						<li>Kies voor netwerkcentrum openen.</li>
+						<li>Indien je verbonden bent met de kabel klik je op
+							‘LAN-verbinding’. Ben je verbonden via WiFi? Klik dan op
+							‘Draadloze verbinding’.</li>
+						<li>In het nieuwe venster klik je op ‘Eigenschappen’.
+							Opgelet, je hebt hiervoor administrator-machtigingen nodig!</li>
+						<li>Selecteer ‘Internet Protocol versie 4 (TCP/IPv4)’ en klik
+							vervolgens opnieuw voor ‘Eigenschappen’.</li>
+						<li>Opnieuw opent zich een nieuw venster, hierin kies je voor
+							de optie om zelf een IP-adres in te geven.</li>
+						<li>Geef ook een DNS-server in (Waarom?). De DNS-servers van
+							Google zijn 8.8.8.8 en 8.8.4.4 8. Klik op OK. Doe dit ook voor
+							het ander venster.</li>
+					</ol>
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #2ecc71">
+					<h5>Oefeningen</h5>
+					<p>Tijd voor oefeningen!</p>
+					<a href="oefeningen_dns_dhcp_ip.pdf">Klik hier</a> voor oefeningen
+					over de leerstof: DNS, DHCP en IP-adressen.
+				</section>
+				<section class="uitleg" style="background-color: #1abc9c">
+					<h5>Veilig op het net</h5>
+					<p>Aangezien het internet wereldwijd is, kunnen veel mensen het
+						gebruiken. Jammer genoeg zijn daar ook mensen bij met slechte
+						bedoelingen. Ze zijn uit op wachtwoorden, geld en/of persoonlijke
+						gegevens. Sommige aanvallen kan je tegenhouden met specifieke
+						programma’s, tegen anderen sta je volledig machteloos.</p>
+				</section>
+				<section class="uitleg" style="background-color: #7f8c8d">
+					<h5>HTTP versus HTTPS</h5>
+					<p>Wanneer je naar een website surft, vult je browser het
+						webadres automatisch aan met ‘http://’. http staat voor HyperText
+						Transfer Protocol en zorgt ervoor dat websites kunnen worden
+						doorgegeven van de server naar de browser. Deze verbinding is
+						echter niet beveiligd, en dus kan iedereen meeluisteren. Wanneer
+						je bankgegevens of wachtwoorden intypt kan dit desastreuse
+						gevolgen hebben. Om dit probleem op te lossen is men op de proppen
+						gekomen met https, waarbij de s staat voor ‘secure’ (veilig).
+						Hierbij is het onmogelijk om af te luisteren aangezien er tussen
+						de server en de browser een soort van tunnel wordt opgebouwd.</p>
+					<h6>Hoe ben ik verbonden?</h6>
+					<p>
+						De volgende vier kenmerken geven aan dat je veilig bent verbonden:
+						<img alt="Veilig met HTTPS" src="../../../img/https.png"
+							style="width: 100%">
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #e74c3c">
+					<h5>Firewall</h5>
+					<p>Naast het gebruik van https, kan je ook een Firewall
+						gebruiken. Een firewall inspecteert elk bericht dat via het
+						internet een netwerk binnenkomt. Indien het bericht er veilig uit
+						ziet, wordt het doorgestuurd in het netwerk. Wanneer dit niet het
+						geval is, wordt het tegengehouden. Ook Windows heeft per computer
+						een firewall. Je kan eenvoudig de status ervan controleren in het
+						configuratiescherm.</p>
+				</section>
+				<section class="uitleg" style="background-color: #f1c40f">
+					<h5>Soorten servers</h5>
+					<p>
+						Lees hieronder de tekst. Nadien maak je <a href="serverquiz.html">hier
+							de oefeningen</a>.
+					<h6>Webserver</h6>
+					Een webserver bevat websites. Elke site bevindt zich op een
+					webserver. Zo heeft Facebook, Twitter, Google, SmartSchool, …
+					minimum 1 webserver. In vakterminologie zegt men dat een site wordt
+					gehotst op een webserver. De webserver bevindt zich op poort 80.
+					<h6>Aanmeldingsserver</h6>
+					Deze bevat een centrale databank met alle gebruikersinformatie
+					(naam, wachtwoord, rechten, …) worden bijgehouden. Op die manier is
+					het mogelijk dat gebruikers zich kunnen aanmelden in een netwerk en
+					niet enkel op één PC. Ook in het schoolnetwerk bestaat er een
+					aanmeldingsserver. Je kan je immers op alle computers aanmelden.
+					<h6>Fileserver</h6>
+					De fileserver kan je vergelijken met de Dropbox van een netwerk.
+					Het zorgt ervoor dat bestanden (en gegevens) worden opgeslagen en
+					overal in het netwerk toegankelijk zijn.
+					<h6>Printserver</h6>
+					De printserver zorgt ervoor dat alle gebruikers een printer kunnen
+					delen. Verschillende mensen kunnen bijvoorbeeld de printer in de
+					bibliotheek gebruiken.
+					<h6>Mailserver</h6>
+					Verantwoordelijk voor het ontvangen en doorsturen van alle mails
+					van een domein. Bijvoorbeeld: Eugene (eugene@example.com) stuurt
+					een mail naar Lea (lea@hhh.be). De server van het mailadres van
+					Eugene zal de mail doorsturen naar de server van het mailadres van
+					Lea. Op deze server wacht de mail tot wanneer Lea de mail leest.
+					</p>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.container -->
 
 
-  <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-  <script src="../../../js/vendor/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../../js/vendor/video.js"></script>
-  <script src="../../../js/flat-ui.min.js"></script>
-  <script src="../../../js/loader.js"></script>
+	<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+	<script src="../../../js/vendor/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../../js/vendor/video.js"></script>
+	<script src="../../../js/flat-ui.min.js"></script>
+	<script src="../../../js/loader.js"></script>
 
 </body>
 </html>

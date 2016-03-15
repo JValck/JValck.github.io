@@ -1,71 +1,174 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <title>EduBox - Informatica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta itemprop="pagename" content="IN_root">
+<meta charset="utf-8">
+<title>EduBox - Informatica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta itemprop="pagename" content="IN_root">
 
-  <!-- Loading Bootstrap -->
-  <link href="../../../css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Loading Bootstrap -->
+<link href="../../../css/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 
-  <!-- Loading Flat UI -->
-  <link href="../../../css/flat-ui.min.css" rel="stylesheet">
-  
-  <link href="../../../css/custom.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+<link href="../../../css/flat-ui.min.css" rel="stylesheet">
 
-  <link rel="shortcut icon" href="img/favicon.ico">
+<link href="../../../css/custom.css" rel="stylesheet">
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-  <!--[if lt IE 9]>
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- Google Analytics -->
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-75121471-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
   <script src="/js/vendor/html5shiv.js"></script>
   <script src="/js/vendor/respond.min.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="navigation"><!-- loaded by javascript --></div>
-  <div class="container">
-    <h3>Computernetwerken</h3>
-    <p>Deze materialen zijn gemaakt voor <strong>4 TSO Handel</strong></p>
-	<div class="row">
-		<div class="col-md-3 hidden-xs">
-			<div class="tile">
-				<img src="../../../img/icons/svg/pdf.svg" alt="pdf" class="tile-image"/>
-				<a href="Hardware.pdf" class="btn btn-primary btn-large btn-block">Downloaden</a>
+	<div class="navigation">
+		<!-- loaded by javascript -->
+	</div>
+	<div class="container">
+		<h3>Computernetwerken - Hardware</h3>
+		<p>
+			Deze materialen zijn gemaakt voor <strong>4 TSO Handel</strong>
+		</p>
+		<div class="row">
+			<div class="col-md-3 hidden-xs">
+				<div class="tile">
+					<img src="../../../img/icons/svg/pdf.svg" alt="pdf"
+						class="tile-image" /> <a href="Hardware.pdf"
+						class="btn btn-primary btn-large btn-block">Downloaden</a>
+				</div>
+				<div class="tile">
+					<img src="../../../img/icons/svg/people.svg" alt="Presentatie"
+						class="tile-image" /> <a href="https://swipe.to/6159c"
+						class="btn btn-primary btn-large btn-block">Presentatie</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-9">
+				<div class="uitleg" style="background-color: #EFF0F2; color: black;">
+					<p>De presentatie is te vinden in de kolom met links hiernaast.</p>
+				</div>
+				<section class="uitleg" style="background-color: #e67e22">
+					<!-- intro -->
+					<p>Om een computer te verbinden met een andere zijn er
+						verschillende hardwarecomponenten nodig. Net zoals bij verbale
+						communicatie (tussen twee mensen) zijn er ook bij computers
+						tussenstappen nodig. Hieronder vind je een beknopt overzicht van
+						de componenten die we tijdens de les behandeld hebben.</p>
+				</section>
+
+				<section class="uitleg" style="background-color: #f1c40f">
+					<!-- intro -->
+					<h5>Netwerkkaart</h5>
+					<p>
+						De netwerkkaart is als het ware de stem en het gehoor van een
+						computer. Via de netwerkkaart is de computer in staat om zich aan
+						te sluiten bij het netwerk en er ook deel van uit te maken. Op de
+						netwerkkaart vind je de netwerkpoort, typisch kan hier een
+						netwerkdraad op aangesloten worden. Een bekende stekker is de
+						RJ-45, die een UTP-kabel aan de netwerkkaart hangt. Hieronder in
+						figuur 2 is een voorbeeld van zo een RJ-45 aansluiting te zien. <img
+							src="../../../img/computer_network_plug.jpg"
+							alt="Netwerk Interface" />
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #d35400">
+					<h5>Switch</h5>
+					<p>
+						Een switch kan je vergelijken met een verdeeldoos. Wanneer er een
+						bericht op een poort (aansluiting) arriveert, zal de switch die
+						doorsturen naar de poort waarop de bestemming is aangesloten.
+						Switches zijn zelflerend, na verloop van tijd weet hij perfect
+						welke bestemming op welke poort in aangesloten. <img
+							src="../../../img/switch.jpg" alt="Switch" />
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #c0392b">
+					<h5>Router</h5>
+					<p>
+						De router is de meest slimme hardwarecomponent van een netwerk.
+						Het is tevens ook de ruggengraat. Je kan een router vergelijken
+						met een grote verkeerswisselaar. Als je van punt A naar B moet,
+						dan zal je op de verkeerswisselaar keuzes moeten maken. Een router
+						doet dit allemaal voor jou. Wanneer er een bericht aankomt, dan
+						zal het – o.b.v. de verworven kennis – bepalen wat de volgende
+						router is en doorsturen naar die router. Wanneer het bericht is
+						gearriveerd op de laatste router voor de eindbestemming, geeft hij
+						het bericht door aan de switch. Een router is in staat om
+						verschillende netwerken te verbinden. Een mooi voorbeeld hiervan
+						is de router die bij je thuis staat. Deze verbindt immers jouw
+						thuisnetwerk met het internet. De verschillende netwerken hoeven
+						zelfs niet dezelfde taal de spreken. De router speelt dan voor
+						tolk en zal de berichten vertalen zodat ze op het doelnetwerk
+						verstaanbaar zijn. Even een analogie trekken naar de echte wereld.
+						Stel je volgende situatie voor: je bevindt je in het station
+						wanneer een dame jou in een vreemde taal aanspreekt. Je kan echter
+						niet antwoorden omdat je de dame simpelweg niet begrijpt. Een tolk
+						(d.i. de router) kan soelaas brengen. De tolk (in figuur hieronder
+						de middelste persoon) is dan de tussenpersoon die de vraag van de
+						dame voor jou vertaald. Je antwoord zelf in je eigen moedertaal en
+						de tolk zal het antwoord doorgeven, in de juiste taal, aan de
+						dame. Dit is meteen ook het grote verschilpunt met een switch. Een
+						switch is niet in staat om te vertalen maar begrijpt slechts een
+						taal. <img src="../../../img/router_schema.png" alt="Router"
+							style="width: 100%" />
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #8e44ad">
+					<h5>Modem</h5>
+					<p>
+						De modem is een erg belangrijke component om een netwerk aan te
+						sluiten op een distributienetwerk (netwerk waarlangs het
+						telefoon-, TV- en internetverkeer wordt getransporteerd). Het
+						zorgt er immers voor dat de computersignalen kunnen worden
+						verstuurd over een telefoonnetwerk (bv. bij Proximus) of
+						kabelnetwerk (bv. bij Telenet). Daarnaast is een modem ook instaat
+						om het internetsignaal tussen alle ander signalen uit te filteren.
+
+						<img src="../../../img/modem.png" alt="Modem" style="width: 100%" />
+					</p>
+				</section>
+				<section class="uitleg" style="background-color: #2980b9">
+					<h5>Thuissituatie</h5>
+					<p>Het is mogelijk dat je bij je thuis slechts een of twee
+						toestellen vindt. Dit komt omdat de telecomoperatoren (Proximus en
+						Telenet) de verschillende onderdelen combineren in een enkel
+						toestel. Bij grote netwerken (schoolnetwerk, bedrijfsnetwerk,
+						internet,…) vind je de onderdelen wel nog apart terug omdat de
+						belasting van dat netwerk veel groter is.</p>
+				</section>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-9">
-			<section class="uitleg" style="background-color: #e67e22"><!-- intro -->
-				<p>
-				Om een computer te verbinden met een andere zijn er verschillende hardwarecomponenten nodig. Net zoals bij verbale communicatie (tussen twee mensen) zijn er ook bij computers tussenstappen nodig.
-				Hieronder vind je een beknopt overzicht van de componenten die we tijdens de les behandeld hebben.
-				</p>
-			</section>
-			
-			<section class="uitleg" style="background-color: #f1c40f"><!-- intro -->
-				<h6>Netwerkkaart</h6>
-				<p>
-				De netwerkkaart is als het ware de stem en het gehoor van een computer.
-				Via de netwerkkaart is de computer in staat om zich aan te sluiten bij het netwerk en er ook deel van uit te maken.
-				Op de netwerkkaart vind je de netwerkpoort, typisch kan hier een netwerkdraad op aangesloten worden. Een bekende stekker is de RJ-45, die een UTP-kabel aan de netwerkkaart hangt.
-				Hieronder in figuur 2 is een voorbeeld van zo een RJ-45 aansluiting te zien.
-				<img src="../../../img/computer_network_plug.jpg" alt="Netwerk Interface"/>
-				</p>
-			</section>
-			
-		</div>
+
 	</div>
-
-  </div>
-  <!-- /.container -->
+	<!-- /.container -->
 
 
-  <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-  <script src="../../../js/vendor/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../../js/vendor/video.js"></script>
-  <script src="../../../js/flat-ui.min.js"></script>
-  <script src="../../../js/loader.js"></script>
+	<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+	<script src="../../../js/vendor/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../../js/vendor/video.js"></script>
+	<script src="../../../js/flat-ui.min.js"></script>
+	<script src="../../../js/loader.js"></script>
 
 </body>
 </html>
