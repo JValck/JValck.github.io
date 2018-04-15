@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="nl" class="h-full">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flappy Jan</title>
+  <meta name="description" content="Flappy Jan">
+  <meta name="author" content="Setarit">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="../assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script type="text/javascript">
+    screen.orientation.lock('landscape');
+    screen.orientation.lock();
+    screen.lockOrientation("landscape");
+    if(window.innerHeight > window.innerWidth){
+      alert("Gelieve je toestel te draaien en de pagina opnieuw te laden!");
+    }
+  </script>
+  <script type="text/javascript" src="../assets/js/phaser.min.js"></script>
+</head>
+
+<body class="normal-font w-full h-full">
+  <script type="text/javascript" src="../assets/js/games/flappyJan.js" ></script>
+  <p class="text-center">Tik of klik op het speelveld om Jan de lucht in te katapulteren.</p>
+</body>
+</html>

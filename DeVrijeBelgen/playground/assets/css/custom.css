@@ -1,0 +1,32 @@
+/* scada-regular - latin */
+@font-face {
+  font-family: 'Scada';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/scada-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Scada Regular'), local('Scada-Regular'),
+       url('../fonts/scada-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/scada-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/scada-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/scada-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/scada-v6-latin-regular.svg#Scada') format('svg'); /* Legacy iOS */
+}
+
+
+.normal-font {
+  font-family: 'Scada', sans-serif;
+}
+
+.calendar {
+  background-color: #419b3b;
+}
+
+.fanfare {
+  background-image: url('../img/fanfare.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.setarit {
+  background-color: #60609d;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="nl" class="h-full">
+<head>
+  <meta charset="utf-8">
+
+  <title>Waar is Willy?</title>
+  <meta name="description" content="Waar is Willy?">
+  <meta name="author" content="Setarit">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../../assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="../../assets/css/custom.css">
+  <script src="../../assets/js/games/wiw.js" type="text/javascript"></script>
+</head>
+
+<body class="normal-font w-full h-full">
+  <div class="w-full h-full bg-green text-white flex justify-center" id="intro">
+    <div class="text-center">
+      <h1>Waar is Willy?</h1>
+      <img onclick="startGame()" src="../../assets/img/games/wiw/logo.png" />
+      <p class="text-center">Hoe vaak vind jij Willy terug op de foto's?</p>
+      <br />
+      <p>Zodra je hem gevonden hebt, tik je op zijn hoofd.</p>
+      <p>Succes!</p>
+      <form onsubmit="startGame(); return false;">
+        <button class="m-6 bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 border-b-4 border-blue-dark hover:border-blue rounded" type="submit">
+          &#x25BA; Spelen
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="w-full h-full hidden" id="gameContainer">
+    <div class="fixed pin-l pin-t p-2 bg-green text-white" id="score"></div>
+    <img src="../../assets/img/games/wiw/loadingWilly.png" alt="Willy" class="w-screen h-auto" id="willyPicture"/>
+    <div class="fixed pin-r pin-b p-2 bg-red text-white"><a onclick="loadRandomWilly()">Ik kan Willy niet vinden &#x25BA;</a></div>
+  </div>
+  <div class="w-full h-full justify-center bg-green text-white hidden" id="end">
+    <div class="text-center">
+      <h1>Jouw score op de Willy-index</h1>
+      <h2 id="eindResultaat">0%</h2>
+      <img src="../../assets/img/games/wiw/logo.png" />
+      <p id="eindResultaatBetekenis"></p>
+      <form onsubmit="location.reload(true)">
+        <button class="m-6 bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 border-b-4 border-blue-dark hover:border-blue rounded" type="submit">
+          Opnieuw spelen
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
