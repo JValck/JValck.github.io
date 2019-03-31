@@ -151,7 +151,6 @@ function displayUpdatedScore(currentGame) {
   currentGame.score.clear(true);
   var scoreParts = (score+"").split("");
   var halfScreen = currentGame.sys.game.canvas.width / 2;
-  console.log(scoreParts);
   for(var i = 0; i < scoreParts.length; i++){
     currentGame.score.create(halfScreen + (24*i), 50, scoreParts[i]);
   }
